@@ -2,9 +2,13 @@
   "name": "be-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "start": "tsc & nodemon --inspect dist/server",
+    "build": "tsc",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,17 @@
   "bugs": {
     "url": "https://github.com/vivek-barot/backend-node/issues"
   },
-  "homepage": "https://github.com/vivek-barot/backend-node#readme"
+  "homepage": "https://github.com/vivek-barot/backend-node#readme",
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.6.2",
+    "typescript-eslint-parser": "^22.0.0"
+  }
 }
